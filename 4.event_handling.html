@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Handling</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script type="text/babel">
+
+        var Comment = React.createClass({
+            edit: function() {
+                alert('Editing comment');
+            },
+            remove: function() {
+                alert('Removing comment');
+            },
+            render: function() {
+                return (
+                    <div className="commentContainer">
+                        <center>
+                            <div className="commentText">{this.props.children}</div>
+                            <button onClick={this.edit} className="button-primary">Edit</button>
+                            <button onClick={this.remove} className="button-danger">Remove</button>
+                        </center>
+                    </div>
+                );
+            }
+        });
+
+    ReactDOM.render(
+            <div className="board">
+                <Comment>Navya</Comment>
+                <Comment>Ratna</Comment>
+                <Comment>Deepika</Comment>
+            </div>
+            , document.getElementById('container'));
+        
+    </script>
+
+</body>
+</html>
+
