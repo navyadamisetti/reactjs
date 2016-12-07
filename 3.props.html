@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>navya</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="content"></div>
+	<script type="text/jsx">
+	var NavyaComponent = React.createClass({
+		render: function() {
+			return(
+				<div>
+					<h1>{this.props.name} is {this.props.quality}</h1>
+					<p>{this.props.x}</p>
+				</div>
+			);
+		}
+	});
+
+	React.render(
+	    <div>		
+		<NavyaComponent name="Navya" quality="Lovely" x="Yeah it's true!!"/>
+		<NavyaComponent name="Ratna" quality="a girl"/>
+		<NavyaComponent name="Deepika" quality="beautiful" x="great"/>
+		<NavyaComponent name="Chinnu" quality="kind" x="Is it?"/>
+	    </div>, document.getElementById('content'));
+		
+	</script>
+
+</body>
+</html>
