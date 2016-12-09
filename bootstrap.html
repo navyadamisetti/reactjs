@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sprint #3</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"  rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <div id="container"></div>
+    <script type="text/babel">
+      var BootstrapComponent = React.createClass({
+      render: function() {
+        return (
+          <div className="commentContainer">
+            <center>
+              <div className="commentText">
+                <h2>Welcome!!</h2>
+                <br />
+                <h5>click here to Sign In</h5>
+              </div> 
+              <button type="button" className="btn btn-info btn-lg"  data-toggle="modal" data-target="#myModal">Log In</button>
+            </center>
+                    	
+          <div id="myModal" className="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  					<div className="modal-dialog">
+  						<div className="modal-content">
+  							<div className="modal-header">
+  								<button type="button" className="close"  data-dismiss="modal"><span aria-hidden="true">&times;</span><span className="sr-only">Close</span></button>
+  										
+  								<h4 className="modal-title" id="myModalLabel"><span className="glyphicon glyphicon-user"></span> Account Access</h4>
+  								</div>
+  									
+  								<div className="modal-body">
+  									<form className="form-horizontal">
+  										<div class="form-group">
+  											<input type="email" className="form-control" id="email" placeholder="Username" />
+  										  	<br />
+  											<input type="password" className="form-control" id="pwd" placeholder="Password" />
+  										</div>
+  									</form>
+  								</div>
+
+  								<div className="modal-footer">
+  									<button type="button" className="btn btn-primary btn-block"  data-dismiss="modal">Submit</button>
+  									<p><a className="pull-left text-muted" href="">Sign Up!</a>
+  									<a className="pull-right text-muted" href="">Forgot Password</a></p>
+
+  									<center>
+  										<p>Sign with:<i className="fa fa-facebook-f fa-lg" href="" ></i><i className="fa fa-twitter fa-lg" href="" ></i></p>
+  									</center>
+  								</div>
+  							</div>
+  						</div>
+    				</div>
+          </div>
+        );
+      }
+    });
+    
+    ReactDOM.render(<BootstrapComponent />, document.getElementById('container'));   
+  </script>
+</body>
+</html>
